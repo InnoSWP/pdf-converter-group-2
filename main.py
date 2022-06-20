@@ -18,15 +18,6 @@ def index():
     return jsonify({'message': "Test"})
 
 
-def convert(file, name):
-    path = os.path.abspath(name)
-    newPath = name[:len(name) - 4] + "pdf"
-    # os.system(r"lowriter --convert-to pdf " + path +" --outdir " + newPath)
-    os.system("libreoffice --headless --convert-to pdf " + name + " --outdir " + "./")
-    print(newPath)
-    return newPath
-
-
 @app.route('/convertmultiple/pdf', methods=["POST"])
 def convert_mul_pdf():
     if 'file' not in request.files:
