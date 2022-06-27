@@ -7,9 +7,9 @@ A Doc to PDF converter that uses API implementation. The program can convert mul
 * Open any terminal
 * Enter the directory of the files in the terminal
 * use the command: `curl -F`
-* Put in the name of the file, eg: "file=@filename.docx"
+* Put in the name of the file with quotations, eg: `"file=@filename.docx"`
 * Use the server IP: *Changed*
-* Put in the name of the resulted PDF after -o, eg:  -o Result.pdf
+* Put in the name of the resulted PDF after `-o`, eg:  `-o Result.pdf`
 * Full command line: `curl -F "file=@filename.docx" *server ip* -o Result.pdf`
 
 ## Features
