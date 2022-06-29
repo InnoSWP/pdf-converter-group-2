@@ -13,11 +13,6 @@ app = Flask(__name__)
 types = ["docx", "doc"]
 
 
-@app.route('/', methods=['POST', 'GET'])
-def index():
-    return jsonify({'message': "Test"})
-
-
 @app.route('/convertmultiple/pdf', methods=["POST"])
 def convert_mul_pdf():
     if 'file' not in request.files:
