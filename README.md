@@ -9,15 +9,17 @@ A Doc to PDF converter that uses API implementation. The program can convert mul
 * Enter the directory of the files in the terminal
 * use the command: `curl -F`
 * Put in the name of the file with quotations, eg: `"file=@filename.docx"`
-* Use the server IP: *Changed*
+* If the file is an excel make sure to change the type to `xlsx`
+* Put in the program on the server address: `http://77.91.73.240:5000/convert/pdf`
+* For zip of multiple files conversion use: `http://77.91.73.240:5000/convertmultiple/pdf`
 * Put in the name of the resulted PDF after `-o`, eg:  `-o Result.pdf`
-* Full command line: `curl -F "file=@filename.docx" *server ip* -o Result.pdf`
+* Full command line example: `curl -F "file=@filename.docx" http://77.91.73.240:5000/convert/pdf -o Result.pdf`
 
 ## Features
-* Quick process
-* Secure
-* Relatively fast conversion speed
-* Work on all Operating Systems
+* Simple conversion process
+* Secure operation
+* Fast conversion speed
+* Works on all Operating Systems
 
 ## Technology
 The program currently uses LibreOffice library
