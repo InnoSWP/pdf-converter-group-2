@@ -13,7 +13,8 @@ A Doc to PDF converter that uses API implementation. The program can convert mul
 * Put in the program on the server address: `http://77.91.73.240:5000/convert/pdf`
 * For zip of multiple files conversion use: `http://77.91.73.240:5000/convertmultiple/pdf`
 * Put in the name of the resulted PDF after `-o`, eg:  `-o Result.pdf`
-* Full command line example: `curl -F "file=@filename.docx" http://77.91.73.240:5000/convert/pdf -o Result.pdf`
+* Full command line example:
+`curl -F "file=@filename.docx" http://77.91.73.240:5000/convert/pdf -o Result.pdf`
 
 ## Features
 * Simple conversion process
