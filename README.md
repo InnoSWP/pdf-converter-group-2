@@ -16,7 +16,32 @@ A Doc to PDF converter that uses API implementation. The program can convert mul
 * Full command line example: `curl -F "file=@filename.docx" http://77.91.73.240:5000/convert/pdf -o Result.pdf`
 
 ## Demo Screenshots
-![](images/cmd.png)
+### Single File:
+Docx and Xlsx files before conversion:
+
+<img src="images/singlesbefore.png" width="550" >
+
+Conversion process:
+
+<img src="images/cmd.png" width="800" >
+
+New PDF files in the directory:
+
+<img src="images/singlesresults.png" width="550" >
+
+### Multiple Files:
+
+Zip file with the files that need to converted:
+
+<img src="images/multiplebefore.png" width="550" >
+
+Conversion process:
+
+<img src="images/cmd2.png" width="800" >
+
+New Zip folder that contains converted PDF files in the directory:
+
+<img src="images/multipleafter.png" width="550" >
 
 
 ## Features
