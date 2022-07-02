@@ -22,5 +22,6 @@ A Doc to PDF converter that uses API implementation. The program can convert mul
 * Fast conversion speed
 * Works on all Operating Systems
 
-## Technology
+## Technology and License
 The program currently uses LibreOffice library
+The progeam uses the MIT License
