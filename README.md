@@ -11,13 +11,13 @@ A Doc to PDF converter that uses API implementation. The program can convert mul
 * Put in the name of the file with quotations, eg: `"file=@filename.docx"`
 * If the file is an excel make sure to change the type to `xlsx`
 * Put in the program on the server address: `http://77.91.73.240:5000/convert/pdf`
-* For zip of multiple files conversion use: `http://77.91.73.240:5000/convertmultiple/pdf`
+* For zip of multiple files conversion use: `http://77.91.73.240:5000/convertFolder/pdf`
 * Put in the name of the resulted PDF after `-o`, eg:  `-o Result.pdf`
 * Full command line example: `curl -F "file=@filename.docx" http://77.91.73.240:5000/convert/pdf -o Result.pdf`
 
 ## Demo Screenshots
 The docx file:
-![image](https://user-images.githubusercontent.com/98668965/177014225-9a4b4188-83c7-4c48-a550-3eef5e0b5d0c.png)
+
 
 ## Features
 * Simple conversion process
