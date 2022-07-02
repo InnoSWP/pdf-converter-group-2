@@ -2,7 +2,7 @@
 ![https://badgen.net/badge/:subject/:status/:color?icon=github](https://badgen.net/badge/icon/terminal?icon=terminal&label)
 ![https://badgen.net/badge/:subject/:status/:color?icon=github](https://badgen.net/badge/license/MIT/red)
 # MF-PDF
-A Doc to PDF converter that uses API implementation. The program can convert multiple fils in a relatively fast speed. The program can also convert Xsl files to PDF.
+A Doc to PDF converter that uses API implementation. The program can convert multiple fils in a relatively fast speed. The program can also convert XLSX files to PDF.
 
 ## How to use
 * Open any terminal
@@ -18,6 +18,7 @@ A Doc to PDF converter that uses API implementation. The program can convert mul
 
 ## Features
 * Simple conversion process
+* No external programs needed
 * Secure operation
 * Fast conversion speed
 * Works on all Operating Systems
