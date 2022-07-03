@@ -31,7 +31,7 @@ New PDF files in the directory:
 
 ### Multiple Files:
 
-Zip file with the files that need to converted:
+Zip file with the files that should be converted:
 
 <img src="images/multiplebefore.png" width="550" >
 
@@ -39,7 +39,7 @@ Conversion process:
 
 <img src="images/cmd2.png" width="800" >
 
-New Zip folder that contains converted PDF files in the directory:
+New Zip folder that contains converted PDF files in the same directory:
 
 <img src="images/multipleafter.png" width="550" >
 
