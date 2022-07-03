@@ -14,11 +14,12 @@ csrf.init_app(app) # Compliant
 
 types = ["docx", "doc","xlsx","xls"]
 
+error = 'file part is missed'
 
 @app.route('/convertFolder/pdf', methods=["POST"])
 def convert_folder_pdf():
     if 'file' not in request.files:
-        response = jsonify({'message': 'file part is missed'})
+        response = jsonify({'message': error})
         response.status_code = 400  # Bad request
         return response
     file = request.files['file']
@@ -58,7 +59,7 @@ def convert_folder_pdf():
 @app.route('/convertmultiple/pdf', methods=["POST"])
 def convert_mul_pdf():
     if 'file' not in request.files:
-        response = jsonify({'message': 'file part is missed'})
+        response = jsonify({'message': error})
         response.status_code = 400  # Bad request
         return response
     archive = tempfile.NamedTemporaryFile(prefix="Muhammadjon", suffix=".zip")
@@ -91,7 +92,7 @@ def convert_mul_pdf():
 @app.route('/convert/pdf', methods=["POST"])
 def convert_pdf():
     if 'file' not in request.files:
-        response = jsonify({'message': 'file part is missed'})
+        response = jsonify({'message': error})
         response.status_code = 400  # Bad request
         return response
     file = request.files['file']
