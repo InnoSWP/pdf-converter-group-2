@@ -116,5 +116,6 @@ def convert_pdf():
 
     
 if __name__ == "__main__":
-    app.run(host='77.91.73.240') 
+    ip = '77.91.73.240'
+    app.run(host=ip) 
                                                                                                                      
