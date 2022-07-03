@@ -18,7 +18,7 @@ def index():
     return jsonify({'message': "Test"})
 
 @app.route('/convertFolder/pdf', methods=["POST"])
-def convert_Folder_pdf():
+def convert_folder_pdf():
     if 'file' not in request.files:
         response = jsonify({'message': 'file part is missed'})
         response.status_code = 400  # Bad request
@@ -48,8 +48,8 @@ def convert_Folder_pdf():
         temp_file.write(uploaded_file)
         subprocess.run(["lowriter", "--headless", "--convert-to", "pdf", temp_file.name, "--outdir", os.path.dirname(pdf.name)])
         pdf = open(pdf_name, "rb")
-        newFile = io.BytesIO(pdf.read())
-        newFile.seek(0)
+        new_file = io.BytesIO(pdf.read())
+        new_file.seek(0)
         acrhive_zip.write(pdf.name, os.path.basename(pdf.name))
        # acrhive_zip.write(uploaded_file_name, os.path.basename(pdf.name))
         pdf.close()
