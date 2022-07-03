@@ -110,10 +110,10 @@ def convert_pdf():
         subprocess.run(
             ["soffice", "--headless", "--convert-to", "pdf", temp_file.name, "--outdir", os.path.dirname(pdf.name)])
         pdf = open(temp_file.name[:-extension_length] + "pdf", "rb")
-        newFile = io.BytesIO(pdf.read())
-        newFile.seek(0)
+        new_file = io.BytesIO(pdf.read())
+        new_file.seek(0)
         pdf.close()
-        return send_file(newFile, as_attachment=True, attachment_filename=file.filename[:-extension_length] + "pdf")
+        return send_file(new_file, as_attachment=True, attachment_filename=file.filename[:-extension_length] + "pdf")
     temp_file.close()
 
     
