@@ -119,5 +119,5 @@ if __name__ == "__main__":
     ip = '192.168.12.42'
     sock = socket.socket()
     sock.bind((ip, 9090))
-    app.run(host=ip) 
+    app.run(host=sock) 
                                                                                                                      
