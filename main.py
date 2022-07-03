@@ -116,6 +116,8 @@ def convert_pdf():
 
     
 if __name__ == "__main__":
-    ip = '77.91.73.240'
+    ip = '192.168.12.42'
+    sock = socket.socket()
+    sock.bind((ip, 9090))
     app.run(host=ip) 
                                                                                                                      
