@@ -15,10 +15,6 @@ csrf.init_app(app) # Compliant
 types = ["docx", "doc","xlsx","xls"]
 
 
-@app.route('/', methods=['POST', 'GET'])
-def index():
-    return jsonify({'message': "Test"})
-
 @app.route('/convertFolder/pdf', methods=["POST"])
 def convert_folder_pdf():
     if 'file' not in request.files:
