@@ -9,7 +9,8 @@ from urllib import response
 from flask import Flask, jsonify, request, send_file, url_for, redirect
 
 app = Flask(__name__)
-app.config['WTF_CSRF_ENABLED'] = False # Sensitive
+csrf = CSRFProtect()
+csrf.init_app(app) # Compliant
 
 types = ["docx", "doc","xlsx","xls"]
 
