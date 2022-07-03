@@ -15,6 +15,7 @@ csrf.init_app(app) # Compliant
 types = ["docx", "doc","xlsx","xls"]
 
 error = 'file part is missed'
+type_error = 'Not a appropriate type'
 
 @app.route('/convertFolder/pdf', methods=["POST"])
 def convert_folder_pdf():
@@ -39,7 +40,7 @@ def convert_folder_pdf():
         extension_length = len(extension)
         temp_file = tempfile.NamedTemporaryFile(prefix=uploaded_file_name, suffix="." + extension, delete=True)
         if extension not in types:
-            response = jsonify({'message': 'Not a appropriate type'})
+            response = jsonify({'message': type_error})
             response.status_code = 409  # Conflict
             return response
          pdf = open(temp_file.name[:-extension_length] + "pdf", "w")
@@ -72,7 +73,7 @@ def convert_mul_pdf():
         extension_length = len(extension)
         temp_file = tempfile.NamedTemporaryFile(prefix=uploaded_file_name, suffix="." + extension, delete=True)
         if extension not in types:
-            response = jsonify({'message': 'Not a appropriate type'})
+            response = jsonify({'message': type_error})
             response.status_code = 409  # Conflict
             return response
         if uploaded_file:
@@ -82,8 +83,8 @@ def convert_mul_pdf():
             subprocess.run(
                 ["lowriter", "--headless", "--convert-to", "pdf", temp_file.name, "--outdir", os.path.dirname(pdf.name)])
             pdf = open(pdf_name, "rb")
-            newFile = io.BytesIO(pdf.read())
-            newFile.seek(0)
+            new_file = io.BytesIO(pdf.read())
+            new_file.seek(0)
             acrhive_zip.write(pdf.name, os.path.basename(pdf.name))
             pdf.close()
         temp_file.close()
@@ -100,7 +101,7 @@ def convert_pdf():
     extension_length = len(extension)
     temp_file = tempfile.NamedTemporaryFile(suffix="." + extension, delete=True)
     if extension not in types:
-        response = jsonify({'message': 'Not a appropriate type'})
+        response = jsonify({'message': type_error})
         response.status_code = 409  # Conflict
         return response
     if file:
