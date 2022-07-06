@@ -53,4 +53,5 @@ New Zip folder that contains converted PDF files in the same directory:
 
 ## Technology and License
 The program currently uses LibreOffice library
+
 The progeam uses the MIT License
